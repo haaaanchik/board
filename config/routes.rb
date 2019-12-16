@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :adverts
-  root to: "adverts#index"
+  namespace :users do
+    resources :adverts
+  end
+  root "adverts#index"
 end

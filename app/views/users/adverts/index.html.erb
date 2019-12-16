@@ -1,0 +1,3 @@
+<% @adverts.each do |advert| %>
+  <%= link_to advert.body, users_advert_path(advert), class: 'nav-item nav-link'%>
+<%end%>

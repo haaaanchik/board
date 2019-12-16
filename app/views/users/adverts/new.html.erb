@@ -1,5 +1,5 @@
 <h1>Новая объявление</h1>
-<%= form_for @advert do |f| %>
+<%= form_for @advert, url: users_adverts_path do |f| %>
   <p> Описание объявлении <br/><%= f.text_area :body %></p>
   <p><%= f.submit "Опубликовать", class: "btn btn-primary" %></p>
 <%end%>

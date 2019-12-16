@@ -1,0 +1,3 @@
+<h1><%= @advert.body %></h1>
+<%= link_to 'Изменить',edit_users_advert_path(@advert), class: "breadcrumb-item"%>
+<%= link_to "Удалить", users_advert_path(@advert), method: :delete, data:{confirm: "Вы уверены?"} %>

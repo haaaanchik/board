@@ -1,5 +1,5 @@
 class Users::AdvertsController < ApplicationController
-
+  before_action :authenticate_user!
   def index
     @adverts = current_user.adverts
   end

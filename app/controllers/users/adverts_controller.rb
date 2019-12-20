@@ -37,12 +37,12 @@ class Users::AdvertsController < ApplicationController
   def destroy
     @advert = Advert.find(params[:id])
     @advert.destroy
-    redirect_to advert_path
+    redirect_to adverts_path
   end
 
   private
   def advert_params
-    params.require(:advert).permit(:body)
+    params.require(:advert).permit(:body, :title, :image, :price)
   end
 
 end

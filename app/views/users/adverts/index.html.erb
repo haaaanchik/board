@@ -1,3 +1,19 @@
-<% @adverts.each do |advert| %>
-  <%= link_to advert.body, users_advert_path(advert), class: 'nav-item nav-link'%>
-<%end%>
+<div class="items">
+  <div class="row">
+    <% @adverts.each do |advert| %>
+      <div class="col-4">
+        <%= link_to advert.title, users_advert_path(advert)%>
+        <%= advert.price %>
+        <%= image_tag advert.image_url if advert.image? %>
+      </div>
+    <%end%>
+  </div>
+</div>
+
+<!--def change-->
+  <!--add_column :adverts, :title, :string-->
+  <!--add_column ключевое слово-->
+  <!--adverts имя таблицы-->
+  <!--title имя поля-->
+  <!--string тип поля-->
+<!--end-->

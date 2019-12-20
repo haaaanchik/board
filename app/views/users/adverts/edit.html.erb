@@ -1,5 +1,27 @@
 <h1>Редактирование</h1>
-<%= form_for @advert, url: users_advert_path do |f| %><br>
-   Описание объявлении <br/><%= f.text_area :body %>
-  <p><%= f.submit "Сохранить", class: "btn btn-primary" %></p>
+<%= form_for @advert, html:{multipart: true}, url: users_advert_path do |f| %><br>
+  <div class='form-group row'>
+    <%= f.label :title, 'Заголовок', class: 'col-sm-2 col-form-label' %>
+    <div class='col-sm-8'>
+      <%= f.text_field :title, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class='form-group row'>
+    <%= f.label :price, 'Цена', class: 'col-sm-2 col-form-label' %>
+    <div class="col-sm-8">
+      <%= f.text_field :price, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class='form-group row'>
+    <%= f.label :body, 'Описание объявлений', class: 'col-sm-2 col-form-label' %>
+    <div class="col-sm-8">
+      <%= f.text_area :body, class: 'form-control '  %>
+      <%= f.file_field :image %>
+      <%= f.submit 'Сохранить', class: 'btn btn-primary' %>
+    </div>
+  </div>
+
+
 <%end%>

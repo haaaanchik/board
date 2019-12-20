@@ -1,3 +1,31 @@
-// Place all the styles related to the adverts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.img-show {
+  margin-bottom: 15px;
+
+  img {
+    width: 350px;
+    height: auto;
+  }
+}
+
+.inscription {
+  margin-bottom: 15px;
+
+}
+
+
+.items{
+
+  img{
+
+    width: 350px;
+    height: auto;
+
+  }
+
+}
+
+textarea.form-control {
+  height: 120px;
+  resize: none;
+}
+

@@ -1,1 +1,7 @@
-<%= @advert.body %>
+<h1><%= @advert.title %></h1>
+<div class='img-show'>
+  <%= image_tag @advert.image_url if @advert.image? %>
+</div>
+
+<p><%= @advert.price %></p>
+<p><%= @advert.body %></p>

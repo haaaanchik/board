@@ -1,3 +1,11 @@
-<% @adverts.each do |advert| %>
-  <%= link_to advert.body, advert_path(advert)%><br>
-<%end%>
+<div class="items">
+  <div class="row">
+    <% @adverts.each do |advert| %>
+      <div class="col-lg-4">
+        <%= link_to advert.title, advert_path(advert)%>
+        <%= advert.price%>
+        <%= image_tag advert.image_url if advert.image? %>
+      </div>
+    <%end%>
+  </div>
+</div>

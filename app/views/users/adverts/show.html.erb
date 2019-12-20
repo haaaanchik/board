@@ -1,3 +1,15 @@
-<h1><%= @advert.body %></h1>
-<%= link_to 'Изменить',edit_users_advert_path(@advert), class: "breadcrumb-item"%>
-<%= link_to "Удалить", users_advert_path(@advert), method: :delete, data:{confirm: "Вы уверены?"} %>
+<h1><%= @advert.title %></h1>
+<div class='img-show'>
+  <%= image_tag @advert.image_url if @advert.image? %>
+</div>
+
+<div class='inscription'>
+  <%= @advert.body %>
+</div>
+
+<%= link_to 'Редактировать',edit_users_advert_path(@advert), class: "btn btn-primary"%>
+<%= link_to "Удалить",
+            users_advert_path(@advert),
+            method: :delete,
+            class: 'btn btn-danger',
+            data:{confirm: "Вы уверены?"} %>

@@ -7,7 +7,9 @@
   <%= @advert.body %>
 </div>
 
-<%= link_to 'Редактировать',edit_users_advert_path(@advert), class: "btn btn-primary"%>
+<%= link_to 'Редактировать',
+            edit_users_advert_path(@advert),
+            class: "btn btn-primary"%>
 <%= link_to "Удалить",
             users_advert_path(@advert),
             method: :delete,

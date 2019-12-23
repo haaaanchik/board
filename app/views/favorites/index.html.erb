@@ -1,0 +1,11 @@
+<div class="items">
+  <div class="row">
+    <% @favorites.each do |favorite| %>
+      <div class="col-lg-4">
+        <%= link_to favorite.advert.title, advert_path(favorite.advert_id)%>
+        <%= favorite.advert.price%>
+        <%= image_tag favorite.advert.image_url if favorite.advert.image? %>
+      </div>
+    <%end%>
+  </div>
+</div>

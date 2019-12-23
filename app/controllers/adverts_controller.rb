@@ -6,6 +6,7 @@ class AdvertsController < ApplicationController
 
   def show
     @advert = Advert.find(params[:id])
+    @favorite =  current_user.favorites.find_by(advert_id: @advert.id)
   end
 
 end

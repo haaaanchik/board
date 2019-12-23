@@ -1,7 +1,14 @@
 <h1><%= @advert.title %></h1>
+
 <div class='img-show'>
   <%= image_tag @advert.image_url if @advert.image? %>
 </div>
-
-<p><%= @advert.price %></p>
-<p><%= @advert.body %></p>
+<div class='inscription'>
+  <%= @advert.price %><br/>
+  <%= @advert.body %>
+  <% if @favorite.nil? %>
+    <%= link_to 'Добавить в избранное',favorites_path(advert_id: @advert.id), method: :post%>
+  <% else %>
+    <%= link_to 'Удалить ' ,favorite_path(@favorite), method: :delete%>
+    <% end %>
+</div>
